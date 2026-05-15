@@ -1,0 +1,30 @@
+CREATE TABLE IF NOT EXISTS dataset_calibracao (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id_substancia TEXT NOT NULL,
+  ch1 REAL NOT NULL,
+  ch2 REAL NOT NULL,
+  ch3 REAL NOT NULL,
+  ch4 REAL NOT NULL,
+  ch5 REAL NOT NULL,
+  ch6 REAL NOT NULL,
+  ch7 REAL NOT NULL,
+  ch8 REAL NOT NULL,
+  ch9 REAL NOT NULL,
+  ch10 REAL NOT NULL,
+  ch11 REAL NOT NULL,
+  ch12 REAL NOT NULL,
+  ch13 REAL NOT NULL,
+  ch14 REAL NOT NULL,
+  ch15 REAL NOT NULL,
+  ch16 REAL NOT NULL,
+  ch17 REAL NOT NULL,
+  ch18 REAL NOT NULL,
+  ph REAL NOT NULL,
+  temp REAL NOT NULL,
+  densidade_real REAL NOT NULL,
+  lote_id TEXT,
+  coletado_em TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_dataset_calibracao_substancia
+  ON dataset_calibracao (id_substancia);

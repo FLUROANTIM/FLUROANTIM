@@ -1,0 +1,17 @@
+{
+  "name": "fluroantim",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Backend orchestration for Fluro-Brain with OpenRouter + Turso",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "check": "node --check backend/src/server.js && node --check backend/src/controllers/quimicaController.js && node --check backend/src/services/openRouterService.js && node --check backend/src/services/databaseService.js && node --check backend/src/services/modelInferenceService.js"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.7",
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "express": "^4.21.2",
+    "openai": "^4.104.0"
+  }
+}
